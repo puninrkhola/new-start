@@ -1,0 +1,90 @@
+ 1) // normal loop example
+import java.util.*;
+public class newloops {
+    public static void main(String[] args) {
+        int counter = 0;
+        while(counter<10)
+        {
+            System.out.println("helloworld");
+            counter++;
+        }
+        System.out.println(" print it 100x");
+    }
+}
+2)
+//printing numbers from 1 to 100
+import java.util.*;
+public class printing {
+    public static void main(String[] args) {
+        int counter = 1;
+        while(counter <=100)
+        {
+            System.out.println(counter +" ");
+            counter++;
+        }
+    }
+}
+
+3) 
+//print numbers from 1 to 100
+import java.util.*;
+public class printfrom {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int range = sc.nextInt();
+        int counter =1;
+        while(counter<=range)
+        {
+            System.out.println(counter+" ");
+            counter++;
+        }
+    }
+}
+4)
+//sum of first natural numbers
+import java.util.*;
+public class sumof {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int sum = 0;
+        int i = 1;
+        while(i<=n)
+        {
+            sum+=i;
+            i++;
+        }
+        System.out.println(sum);
+    }
+}
+5)
+//printing for one 
+import java.util.*;
+public class forone {
+    public static void main(String[] args) {
+        /*for(int lines=1;lines<=4;lines++)
+        {
+            System.out.println("****");
+        }*/
+        int lines=1;
+        while(lines<=4)
+        {
+            System.out.println("****");
+            lines++;
+        }
+    }
+}
+6)
+//printing reverse number
+import java.util.*;
+public class printingreverse {
+    public static void main(String[] args) {
+        int n = 27022005;
+        while(n>0)
+        {
+            int lastdigit=n%10;
+            System.out.println(lastdigit+" ");
+            n=n/10;
+        }
+    }
+}
