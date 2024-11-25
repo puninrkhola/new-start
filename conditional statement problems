@@ -1,0 +1,86 @@
+1) // a java program to get a number from user print whether it is positive or negative
+import java.util.*;
+public class positive {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int x = sc.nextInt();
+        if(x>0)
+        {
+            System.out.println("x is  positive ");
+        }
+        else {
+            System.out.println("x is negative");
+        }
+    }
+}
+2)// printing whether u have fever 
+import java.util.*;
+public class temperature {
+    public static void main(String[] args) {
+        double temp = 104.5;
+        if(temp>100)
+        {
+            System.out.println("you have fever");
+        }
+        else {
+            System.out.println(" no fever");
+        }
+    }
+}
+
+3) // a java program to input week number and print day of week name using switch case 
+import java.util.*;
+public class switchcase {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter the week number(1-7)");
+        int week = sc.nextInt();
+        switch(week)
+        {
+            case 1:
+                System.out.println("m");
+                break;
+            case 2:
+                System.out.println("t");
+                break;
+            case 3:
+                System.out.println("w");;break;
+            case 4:
+                System.out.println("thu");
+                break;
+            case 5:
+                System.out.println("fri");
+                break;
+            case 6:
+                System.out.println("sat");
+                break;
+            case 7:
+                System.out.println("sun");
+                break;
+            default:
+                System.out.println("invalid week");
+        }
+    }
+}
+ 4) // checking whether the entered leap year is a leap year or not
+  import java.util.*;
+public class leapyear {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("input the year");
+        int year = sc.nextInt();
+        boolean x = (year % 4)==0;
+        boolean y = (year % 100)==0;
+        boolean z = ((year % 100==0) && (year%400==0));
+
+        if(x && (y || z))
+        {
+            System.out.println(year +" is a leap year ");
+        }
+        else
+        {
+            System.out.println(year + " is not a leap year");
+        }
+
+
+    }}
