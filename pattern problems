@@ -1,0 +1,76 @@
+1)// printing normal  square pattern
+import java.util.*;
+public class thesquare {
+    public static void main(String[] args) {
+        int n=1;
+        for(n=1;n<=4;n++)
+        {
+            System.out.println("****");
+        }
+    }
+}
+
+2)// printing the sloped kind star
+import java.util.*;
+public class thestar {
+    public static void main(String[] args) {
+        for(int lines=1;lines<=4;lines++)
+        {
+            for(int star=1;star<=lines;star++)
+            {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+3)//printing inverted star pattern
+import java.util.*;
+
+public class invertedstar {
+    public static void main(String[] args) {
+        int n= 10;
+        for(int i=1;i<=n;i++)
+        {
+            for(int j=1;j<=n-i+1;j++)
+            {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+4)// printing half pyramid pattern
+import java.util.*;
+public class halfpyramid {
+    public static void main(String[] args) {
+        int n=4;
+        int i;
+        for(i=1;i<=n;i++)
+        {
+            for(int j=1;j<=i;j++)
+            {
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+    }
+
+    5)// printing character pattern
+    import java.util.*;
+public class charpattern {
+    public static void main(String[] args) {
+        char ch = 'A';
+        int n = 10;
+        for(int i=1;i<=n;i++)
+        {
+            for(int j=1;j<=i;j++)
+            {
+                System.out.print(ch);
+                ch++;
+            }
+            System.out.println();
+        }
+    }
+}
