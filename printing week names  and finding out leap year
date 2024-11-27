@@ -1,0 +1,56 @@
+1) printing week names using switch case
+import java.util.*;
+public class switchcase {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter the week number(1-7)");
+        int week = sc.nextInt();
+        switch(week)
+        {
+            case 1:
+                System.out.println("m");
+                break;
+            case 2:
+                System.out.println("t");
+                break;
+            case 3:
+                System.out.println("w");;break;
+            case 4:
+                System.out.println("thu");
+                break;
+            case 5:
+                System.out.println("fri");
+                break;
+            case 6:
+                System.out.println("sat");
+                break;
+            case 7:
+                System.out.println("sun");
+                break;
+            default:
+                System.out.println("invalid week");
+        }
+    }
+}
+2) // checking whether the entered year is leap year or not
+import java.util.*;
+public class leapyear {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("input the year");
+        int year = sc.nextInt();
+        boolean x = (year % 4)==0;
+        boolean y = (year % 100)==0;
+        boolean z = ((year % 100==0) && (year%400==0));
+
+        if(x && (y || z))
+        {
+            System.out.println(year +" is a leap year ");
+        }
+        else
+        {
+            System.out.println(year + " is not a leap year");
+        }
+
+
+    }}
