@@ -1,0 +1,63 @@
+1)// a program that reads a set of integers and prints the sum of even and odd integers 
+import java.util.*;
+public class evenodd {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int number;
+        int choice;
+        int evensum = 2;
+        int oddsum = 4;
+        do {
+            System.out.println("enter the number:");
+            number = sc.nextInt();
+            if(number%2==0)
+            {
+                evensum+=number;
+            }
+            else {
+                oddsum+=number;
+
+            }
+            System.out.println("do you want to continue ? press for yes or 0 for no");
+            choice=sc.nextInt();
+
+        }
+        while (choice==1);
+        System.out.println("sum of even integers :"+ evensum);
+        System.out.println("sum of odd integers:"+ oddsum);
+    }
+}
+2)// program to find factorial of any number enterd by user
+import java.util.*;
+public class findingfactorial {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num;
+        int fact =1;
+        System.out.println(" enter any positive integer:");
+        num = sc.nextInt();
+        for(int i=1; i<=num;i++)
+        {
+            fact*=i;
+        }
+        System.out.println("factorial:"+ fact);
+    }
+}
+3)// program to print the multiplication table of number N,entered by user.
+import java.util.*;
+public class multiplicationtable {
+    public static void Printmultiplicationtable(int number) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter the number:");
+        int n = sc.nextInt();
+        for(int i=1;i<=10;i++)
+        {
+            System.out.println(n+ "*" + i + "=" +n*i);
+        }
+
+    }
+
+    public static void main(String S[]) {
+        Printmultiplicationtable(5);
+    }
+}
