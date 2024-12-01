@@ -1,0 +1,19 @@
+public class FunctionsWithParameters {
+
+    // Method to calculate the area of a rectangle
+    public static int calculateArea(int length, int width) {
+        return length * width;
+    }
+
+    public static void main(String[] args) {
+        // Input values for length and width
+        int length = 10;
+        int width = 5;
+
+        // Call the method and store the result
+        int area = calculateArea(length, width);
+
+        // Display the result
+        System.out.println("The area of the rectangle is: " + area);
+    }
+}
