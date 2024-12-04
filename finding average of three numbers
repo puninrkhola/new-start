@@ -1,0 +1,16 @@
+import java.util.*;
+public class avg {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("enter 1st number:");
+         double x = sc.nextDouble();
+        System.out.println("enter the 2nd number:");
+       double y =  sc.nextDouble();
+        System.out.println("enter the 3rd number:");
+         double z = sc.nextDouble();
+        System.out.println("the avg value is" + avg(x,y,z)+"\n");
+    }
+    public static double avg(double x, double y, double z)
+    {
+        return (x+y+z)/3;
+    }
