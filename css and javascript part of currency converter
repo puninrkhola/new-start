@@ -1,0 +1,151 @@
+/* Reset default styling */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body and text styling */
+body {
+    font-family: 'Amiri', serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Heading styling */
+.heading {
+    margin: 20px 0;
+    font-family: 'Lobster', cursive;
+    color: #007bff;
+}
+
+/* Container styling */
+.container {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Main section */
+.main {
+    padding: 20px;
+}
+
+/* Form group */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Input field */
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Prevent text wrapping in select options */
+.form-control option {
+    white-space: nowrap;
+}
+
+/* Button styling */
+.btn {
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+/* Primary button */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #ffffff;
+}
+
+/* Reset button */
+.btn-primary.reset {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+/* Center text */
+.text-center {
+    text-align: center;
+}
+
+/* Converted amount display */
+#finalAmount {
+    margin-top: 20px;
+}
+
+.finalValue {
+    color: green;
+    font-weight: bold;
+}  
+
+
+
+
+
+
+javascript
+// Include api for currency change
+const api = "https://api.exchangerate-api.com/v4/latest/USD";
+
+// For selecting different controls
+let search = document.querySelector(".searchBox");
+let convert = document.querySelector(".convert");
+let fromCurrecy = document.querySelector(".from");
+let toCurrecy = document.querySelector(".to");
+let finalValue = document.querySelector(".finalValue");
+let finalAmount = document.getElementById("finalAmount");
+let resultFrom;
+let resultTo;
+let searchValue;
+
+// Event when currency is changed
+fromCurrecy.addEventListener('change', (event) => {
+    resultFrom = `${event.target.value}`;
+});
+
+// Event when currency is changed
+toCurrecy.addEventListener('change', (event) => {
+    resultTo = `${event.target.value}`;
+});
+
+search.addEventListener('input', updateValue);
+
+// Function for updating value
+function updateValue(e) {
+    searchValue = e.target.value;
+}
+
+// When user clicks, it calls function getresults 
+convert.addEventListener("click", getResults);
+
+// Function getresults
+function getResults() {
+    fetch(`${api}`)
+        .then(currency => {
+            return currency.json();
+        }).then(displayResults);
+}
+
+// Display results after conversion
+function displayResults(currency) {
+    let fromRate = currency.rates[resultFrom];
+    let toRate = currency.rates[resultTo];
+    finalValue.innerHTML =
+        ((toRate / fromRate) * searchValue).toFixed(2);
+    finalAmount.style.display = "block";
+}
+
+// When user click on reset button
+function clearVal() {
+    window.location.reload();
+    document.getElementsByClassName("finalValue").innerHTML = "";
+};
