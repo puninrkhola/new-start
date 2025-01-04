@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class UpperToLower {
+    public static void main(String[] args) {
+        // Create a Scanner object for user input
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt the user to enter an uppercase string
+        System.out.print("Enter a string in uppercase: ");
+        String uppercaseString = scanner.nextLine();
+
+        // Convert the string to lowercase
+        String lowercaseString = uppercaseString.toLowerCase();
+
+        // Display the result
+        System.out.println("The lowercase version of the string is: " + lowercaseString);
+
+        // Close the scanner
+        scanner.close();
+    }
+}
