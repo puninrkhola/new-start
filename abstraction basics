@@ -1,0 +1,95 @@
+// Abstract Class: Demonstrates Abstraction
+abstract class Shape {
+    // Abstract method - no implementation
+    public abstract double calculateArea();
+
+    // Concrete method - can be used by all subclasses
+    public void displayShape() {
+        System.out.println("This is a shape.");
+    }
+}
+
+// Circle class inheriting from Shape
+class Circle extends Shape {
+    private double radius; // Encapsulation: private variable
+
+    // Constructor to initialize radius
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    // Abstract method implemented
+    @Override
+    public double calculateArea() {
+        return Math.PI * radius * radius;
+    }
+
+    // Getter and Setter for radius (Encapsulation)
+    public double getRadius() {
+        return radius;
+    }
+
+    public void setRadius(double radius) {
+        if (radius > 0) {
+            this.radius = radius;
+        } else {
+            System.out.println("Radius must be positive.");
+        }
+    }
+}
+
+// Rectangle class inheriting from Shape
+class Rectangle extends Shape {
+    private double length, width; // Encapsulation: private variables
+
+    // Constructor to initialize length and width
+    public Rectangle(double length, double width) {
+        this.length = length;
+        this.width = width;
+    }
+
+    // Abstract method implemented
+    @Override
+    public double calculateArea() {
+        return length * width;
+    }
+
+    // Getter and Setter for length and width (Encapsulation)
+    public double getLength() {
+        return length;
+    }
+
+    public void setLength(double length) {
+        this.length = length;
+    }
+
+    public double getWidth() {
+        return width;
+    }
+
+    public void setWidth(double width) {
+        this.width = width;
+    }
+}
+
+// Main Class to Demonstrate Abstraction and Encapsulation
+public class AbstractionEncapsulationExample {
+    public static void main(String[] args) {
+        // Abstraction: Shape reference to Circle and Rectangle objects
+        Shape circle = new Circle(5);
+        Shape rectangle = new Rectangle(4, 6);
+
+        // Using abstract method
+        System.out.println("Circle Area: " + circle.calculateArea());
+        System.out.println("Rectangle Area: " + rectangle.calculateArea());
+
+        // Demonstrating Encapsulation
+        Circle myCircle = new Circle(7);
+        System.out.println("Initial Radius: " + myCircle.getRadius());
+
+        // Changing radius using setter
+        myCircle.setRadius(10);
+        System.out.println("Updated Radius: " + myCircle.getRadius());
+        System.out.println("Updated Circle Area: " + myCircle.calculateArea());
+    }
+}
