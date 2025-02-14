@@ -1,0 +1,189 @@
+public class OOPS {
+    public static void main(String[] args) {
+        Pen p1 = new  Pen();
+        p1.SetColor("green");
+        System.out.println(p1.getColor());
+        p1.SetColor("yellow");
+        System.out.println(p1.getColor());
+        p1.Settip(5);
+        System.out.println(p1.getTip());
+        bank mybank = new bank();
+        mybank.username = "puni";
+        mybank.password = "34";
+        System.out.println(mybank.username);
+    }
+}
+class Pen
+{
+     private String Color;
+       private int tip;
+
+    String getColor()
+
+    {
+        return this.Color;
+    }
+
+    int getTip()
+    {
+        return this.tip;
+    }
+
+    void SetColor(String newColor)
+    {
+         this.Color = newColor;
+    }
+
+    void Settip(int newtip)
+    {
+        this.tip = newtip;
+    }
+}
+class bank
+{
+    public String username;
+    String password;
+    public void Setpassword(strings pwd)
+    {
+        password = pwd.toString();
+    }
+}
+
+
+//base class
+    class animal
+    {
+        String color;
+
+        void eats()
+        {
+            System.out.println("eats");
+        }
+        void runs()
+        {
+            System.out.println("runs");
+        }
+    }
+    class fish extends animal
+    {
+        int fins;
+        void swims()
+        {
+            System.out.println("swimming");
+        }
+    }
+    public class inherit  {
+        public static void main(String[] args) {
+            System.out.println("hello");
+            fish f = new fish();
+            f.eats();
+            f.runs();
+
+        }
+ }
+
+
+class calculator
+    {
+        int sum(int a, int b)
+        {
+            return a+b;
+        }
+        float sum(float  a, float b)
+        {
+            return a+b;
+        }
+        int sum(int a ,int b, int c)
+        {
+            return a+b+c;
+        }
+    }
+
+    class Animal
+    {
+        void eat()
+        {
+            System.out.println("eats anything");
+        }
+
+    }
+
+    class deer extends animal{
+            void eat()
+            {
+                System.out.println("eats grass0");
+            }
+    }
+    public class poly {
+        public static void main(String[] args) {
+            calculator calci = new calculator();
+            System.out.println(calci.sum(1,2));
+            System.out.println(calci.sum((float) 2.3,(float)4.5));
+            System.out.println(calci.sum(3,4,5));
+
+
+            deer d = new deer();
+            d.eats();
+        }
+}
+
+
+abstract class anime
+ {
+     void eat()
+     {
+         System.out.println("animal eats");
+     }
+     abstract void walk();
+ }
+
+ class horse extends anime
+ {
+     void walk()
+     {
+         System.out.println("walks on 4 legs");
+     }
+ }
+
+ class Chicken extends anime
+ {
+    void walk()
+    {
+        System.out.println("walks on 2 legs ");
+    }
+ }
+public class abs {
+    public static void main(String[] args) {
+        horse h = new horse();
+        h.eat();
+        h.walk();
+
+        Chicken c = new Chicken();
+        c.eat();
+        c.walk();
+    }
+}
+
+
+public class pairs {
+    public static void printparis(int numbers[])
+    {
+        for (int i=0;i<numbers.length;i++)
+        {
+            int curr = numbers[i];
+            for (int j=i+1;j<numbers.length;j++)
+            {
+                System.out.println("("+ curr + "," + numbers[j] + ")");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void main(String[] args) {
+        int numbers[] = {2,4,6,8,10};
+        printparis(numbers);
+    }
+
+}
+
+
