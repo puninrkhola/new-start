@@ -1,0 +1,55 @@
+public class recursion {
+
+    //decreasing order
+    public static void printdec(int n) {
+        if(n==1)
+        {
+            System.out.println(n);
+            return;
+        }
+        System.out.println(n+ "  ");
+        printdec(n-1);
+    }
+    //increasing order
+   public static void printinc(int n)
+   {
+       if(n==1)
+       {
+           System.out.println(n+ " ");
+           return;
+       }
+        printinc(n-1);
+       System.out.print(n+ " ");
+   }
+
+   //finding factorial of n
+   public static int  fact(int n)
+   {
+       if(n==0)
+       {
+           return 1;
+       }
+       int fnm = fact(n-1);
+       int fn = n*fact(n-1);
+       return fn;
+
+   }
+   // prinitng sum of n natural numbers
+    public static int calcsum(int n)
+    {
+        if(n==1)
+        {
+            return 1;
+        }
+        int snm1 = calcsum(n-1);
+        int sn = n + snm1;
+        return sn;
+    }
+    public static void main(String[] args) {
+        int n = 5;
+        //printinc(n);
+        //printdec(n);
+        //System.out.println(fact(6));
+        System.out.println(calcsum(2));
+    }
+}
